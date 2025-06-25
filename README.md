@@ -1,60 +1,66 @@
-# WQP_AICTE
+# WQP\_AICTE
 
 # 💧 Water Quality Prediction Using Machine Learning
 
-This project uses machine learning models to predict water quality parameters using historical water quality data from Punjab, India (2000–2021). The goal is to build predictive models that help monitor and manage water quality efficiently, especially in detecting harmful pollutants like TDS.
+This project uses machine learning models to analyze and predict water quality parameters using historical data collected in Punjab, India (2000–2021). The goal is to build a predictive pipeline that not only forecasts specific chemical concentrations like Chloride (CL) but also classifies overall water quality and identifies anomalies.
 
 ## 📁 Files
 
-* `WaterQualityPred.ipynb`: Jupyter Notebook containing the complete data analysis, preprocessing, model training, and evaluation.
-* `PB_All_2000_2021.csv`: Dataset containing water quality metrics collected over the years from multiple locations.
+* `WaterQualityPred.ipynb`: Jupyter Notebook containing complete data analysis, visualization, feature engineering, classification and regression models, seasonal analysis, anomaly detection, and export functions.
+* `PB_All_2000_2021.csv`: Dataset with water quality metrics over the years from various regions in Punjab.
+* `cleaned_water_quality.csv`: Final cleaned and enriched dataset with model outputs, seasonal labels, and anomaly detection.
 
 ## 📊 Dataset Overview
 
 The dataset includes:
 
-* Water Quality Parameters: pH, TDS, EC, DO, BOD, and more.
-* Temporal Coverage: 2000 to 2021.
-* Spatial Coverage: Various districts and locations in Punjab.
+* Parameters: NH4, NO3, NO2, SO4, CL, BSK5, O2, PO4, Suspended solids, etc.
+* Time Range: 2000 to 2021
+* Coverage: Multiple locations and samples across Punjab
 
 ## 🔍 Project Highlights
 
-* **Data Cleaning**: Handling missing values and outliers.
-* **Feature Engineering**: Selecting and scaling relevant features.
-* **Visualization**: Trend analysis and correlation heatmaps.
-* **Modeling**: Various regression models (e.g., Linear Regression, Random Forest, etc.).
-* **Evaluation**: Metrics like MAE, MSE, R² for model comparison.
+* **Correlation Analysis**: Identified strongest chemical relationships (e.g., CL vs SO4)
+* **Data Cleaning**: Linear interpolation for missing values
+* **Predictive Modeling**: Used Random Forest for Chloride (CL) prediction
+* **Feature Importance**: Visualized chemical impact on CL levels
+* **Classification**: Classified water quality as Good, Moderate, or Poor using Logistic Regression
+* **Seasonal Trend Analysis**: Boxplots of CL by season (Winter, Summer, etc.)
+* **Anomaly Detection**: Detected unusual CL levels using Isolation Forest
+* **Time Series Prep**: Monthly CL trend for future forecasting
+* **Data Export**: Final enriched CSV for reporting or dashboards
 
 ## ⚙️ How to Run
 
 1. Clone this repository or download the files.
-2. Install the required libraries:
+2. Install required libraries:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
-3. Open `WaterQualityPred.ipynb` in Jupyter Notebook or VS Code and run all cells.
+3. Open `WaterQualityPred.ipynb` in Jupyter or VS Code and run all cells.
 
 ## 📈 Model Goals
 
-* Predict TDS (Total Dissolved Solids) based on other water quality indicators.
-* Aid decision-makers in identifying areas with unsafe water.
-* Provide early alerts through predictive modeling.
+* Predict chloride (CL) levels based on chemical indicators.
+* Categorize water quality using CL thresholds.
+* Highlight seasonal and pollution trends.
+* Detect pollution anomalies using unsupervised models.
+* Export clean data for reuse and further analysis.
 
 ## 🔬 Technologies Used
 
-* Python
-* Jupyter Notebook
+* Python (Jupyter Notebook)
 * Pandas, NumPy
 * Scikit-learn
 * Seaborn, Matplotlib
 
 ## 📌 Future Work
 
-* Integrate deep learning models (LSTM for time-series).
-* Add real-time data collection using APIs or sensors.
-* Deploy the model via a web app for public use.
+* Add LSTM/ARIMA for CL time-series forecasting
+* Streamlit or Dash app for public interaction
+* Integrate sensor/API real-time data pipelines
 
 ## 🧠 Author
 
