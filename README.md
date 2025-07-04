@@ -1,67 +1,65 @@
-# WQP\_AICTE
+# Water Quality Prediction - RMS
 
-# 💧 Water Quality Prediction Using Machine Learning
+This project aims to predict multiple water quality parameters using machine learning techniques, specifically `MultiOutputRegressor` wrapped around a `RandomForestRegressor`. It was developed as part of a one-month **AICTE Virtual Internship sponsored by Shell** in **June 2025**.
 
-This project uses machine learning models to analyze and predict water quality parameters using historical data collected in Punjab, India (2000–2021). The goal is to build a predictive pipeline that not only forecasts specific chemical concentrations like Chloride (CL) but also classifies overall water quality and identifies anomalies.
+---
 
-## 📁 Files
+## Overview
 
-* `WaterQualityPred.ipynb`: Jupyter Notebook containing complete data analysis, visualization, feature engineering, classification and regression models, seasonal analysis, anomaly detection, and export functions.
-* `PB_All_2000_2021.csv`: Dataset with water quality metrics over the years from various regions in Punjab.
-* `cleaned_water_quality.csv`: Final cleaned and enriched dataset with model outputs, seasonal labels, and anomaly detection.
+Access to clean water is a critical global concern. Accurate prediction of various water quality metrics can help in early detection of pollution and ensure timely intervention.
 
-## 📊 Dataset Overview
+In this project, we:
 
-The dataset includes:
+- Collected and preprocessed real-world water quality datasets
+- Used supervised machine learning for multi-target regression
+- Built a pipeline using `MultiOutputRegressor` with `RandomForestRegressor`
+- Evaluated the model using appropriate regression metrics
 
-* Parameters: NH4, NO3, NO2, SO4, CL, BSK5, O2, PO4, Suspended solids, etc.
-* Time Range: 2000 to 2021
-* Coverage: Multiple locations and samples across Punjab
+---
 
-## 🔍 Project Highlights
+## Technologies Used
 
-* **Correlation Analysis**: Identified strongest chemical relationships (e.g., CL vs SO4)
-* **Data Cleaning**: Linear interpolation for missing values
-* **Predictive Modeling**: Used Random Forest for Chloride (CL) prediction
-* **Feature Importance**: Visualized chemical impact on CL levels
-* **Classification**: Classified water quality as Good, Moderate, or Poor using Logistic Regression
-* **Seasonal Trend Analysis**: Boxplots of CL by season (Winter, Summer, etc.)
-* **Anomaly Detection**: Detected unusual CL levels using Isolation Forest
-* **Time Series Prep**: Monthly CL trend for future forecasting
-* **Data Export**: Final enriched CSV for reporting or dashboards
+- **Python 3.12**
+- **Pandas, NumPy** – Data handling
+- **Scikit-learn** – Machine learning model and evaluation
+- **Matplotlib, Seaborn** – Data visualization
+- **Jupyter Notebook** – Interactive experimentation
 
-## ⚙️ How to Run
+---
 
-1. Clone this repository or download the files.
-2. Install required libraries:
+## Predicted Water Quality Parameters
 
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
-```
+The model predicts multiple water quality parameters such as:
 
-3. Open `WaterQualityPred.ipynb` in Jupyter or VS Code and run all cells.
+- NH4
+- BOD5 (BSK5)
+- Colloids
+- O2, NO3, NO2, SO4, PO4 and 
+- CL
 
-## 📈 Model Goals
+---
 
-* Predict chloride (CL) levels based on chemical indicators.
-* Categorize water quality using CL thresholds.
-* Highlight seasonal and pollution trends.
-* Detect pollution anomalies using unsupervised models.
-* Export clean data for reuse and further analysis.
+## Model Performance
 
-## 🔬 Technologies Used
+The model was evaluated using:
 
-* Python (Jupyter Notebook)
-* Pandas, NumPy
-* Scikit-learn
-* Seaborn, Matplotlib
+- **R² Score**
+- **Mean Squared Error (MSE)**
 
-## 📌 Future Work
+Performance was acceptable across all parameters
 
-* Add LSTM/ARIMA for CL time-series forecasting
-* Streamlit or Dash app for public interaction
-* Integrate sensor/API real-time data pipelines
+---
 
-## 🧠 Author
+## Model link: 
 
-Bathala Anjith Kumar
+```https://drive.google.com/file/d/18RJzu35vyuMgpcAE590u1IaDvHY3-SWq/view?usp=sharing```
+
+---
+## Internship Details
+
+- **Internship Type**: AICTE Virtual Internship - Edunet Foundation
+- **Sponsor**: Shell  
+- **Duration**: June 2025 (1 month)  
+- **Focus Area**: Machine Learning in Environmental Monitoring  
+
+---
